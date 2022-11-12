@@ -1,0 +1,59 @@
+.search,
+.antalya,
+.submit,
+.check {
+  color: #676e80;
+  font-size: larger;
+  border: solid 3px #98dcd8;
+  font-size: 25px;
+}
+
+.search,
+.antalya {
+  width: 600px;
+  margin-left: 80px;
+}
+
+#city,
+#time {
+  text-align: left;
+}
+
+.search {
+  margin-top: 40px;
+}
+
+.week,
+.today {
+  font-size: 25px;
+}
+
+.fa-dash {
+  width: 450px;
+  background-color: #98dcd8;
+  height: 4px;
+  margin-left: 0px;
+}
+
+.countries {
+  font-size: 20px;
+}
+
+.fa-diamond {
+  color: #98dcd8;
+}
+
+.antalya a {
+  text-decoration: none;
+}
+
+.antalya a:hover {
+  text-decoration: underline;
+}
+
+.check:hover {
+  cursor: pointer;
+}
+
+
+
