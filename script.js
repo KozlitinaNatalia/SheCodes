@@ -47,7 +47,7 @@ function displayForecast(response) {
     `;
     }
   });
-  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML += `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
@@ -147,3 +147,29 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
+function weatherOverTheWorld(city){
+  let apiKey = "3b009f8c7f78b32731d19b7ddd5b7a4d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(addTemperature);
+  function addTemperature(response) {
+    if (city === "London") {
+      let londonElement = document.querySelector("#london");
+      londonElement.innerHTML = Math.round(response.data.main.temp) + "°C";
+    } else if (city === "Paris") {
+      let londonElement = document.querySelector("#paris");
+      londonElement.innerHTML = Math.round(response.data.main.temp) + "°C";
+    } else if (city === "Tokyo") {
+      let londonElement = document.querySelector("#tokyo");
+      londonElement.innerHTML = Math.round(response.data.main.temp) + "°C";
+    } else if (city === "Kyiv") {
+      let londonElement = document.querySelector("#kyiv");
+      londonElement.innerHTML = Math.round(response.data.main.temp) + "°C";
+    }
+  }
+}
+weatherOverTheWorld("London");
+weatherOverTheWorld("Paris");
+weatherOverTheWorld("Tokyo");
+weatherOverTheWorld("Kyiv");
